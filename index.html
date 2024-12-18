@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Alomy</title>
+    <style type="text/tailwindcss">
+      @layer base {
+        @font-face {
+          font-family: "Inter";
+          src: url("./assets/fonts/Inter.ttf");
+
+          font-family: "NewYork";
+          src: url("./assets/fonts/NewYork.otf");
+        }
+
+        h1 {
+          @apply text-5xl mb-8 font-bold text-white;
+        }
+
+        h2 {
+          @apply text-center text-base mb-4 font-normal uppercase text-white;
+        }
+
+        h3 {
+          @apply text-white font-extrabold;
+          font-family: "NewYork", serif;
+          font-size: clamp(2vw, 5vw, 4vw);
+          font-weight: 400;
+          line-height: 110%;
+        }
+
+        h4 {
+          @apply text-4xl mb-7 text-white;
+          font-family: "NewYork", serif;
+          font-size: clamp(1.6vw, 5vw, 3vw);
+          font-weight: 400;
+          line-height: 120%;
+        }
+
+        h5 {
+          @apply text-white;
+          font-family: "Inter", sans-serif;
+          font-size: clamp(0.6vw, 3vw, 1vw);
+          font-weight: 700;
+          line-height: 120%;
+        }
+
+        a {
+          @apply px-4 text-lg;
+          text-decoration: none;
+        }
+
+        p {
+          @apply font-light	mt-7;
+          font-size: clamp(15px, 5vw, 18px);
+          line-height: 150%;
+          color: #999999;
+        }
+
+        strong {
+          color: white;
+        }
+
+        nav a {
+          @apply text-white font-semibold uppercase;
+          font-size: 13px;
+          padding: 0;
+          transition: 0.5s all ease-in-out;
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+        }
+
+        nav a::before {
+          position: absolute;
+          content: "";
+          background-color: #e8bf96;
+          top: -0.2rem;
+          left: 50%;
+          width: 0;
+          height: 1px;
+          transition: 0.4s all ease-in-out;
+        }
+
+        nav a::after {
+          position: absolute;
+          content: "";
+          background-color: #e8bf96;
+          top: -0.2rem;
+          right: 50%;
+          width: 0;
+          height: 1px;
+          transition: 0.4s all ease-in-out;
+        }
+
+        nav a:hover {
+          color: #e8bf96;
+        }
+
+        nav a:hover::before,
+        nav a:hover::after {
+          width: 50%;
+        }
+
+        .btn {
+          @apply bg-transparent py-6 px-8 text-center text-white font-thin hover:bg-[#E8BF96] hover:text-black rounded-full;
+          border: 1px solid #999999;
+          transition: 0.4s all ease-in-out;
+        }
+
+        .btn:hover {
+          border: 1px solid transparent;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary_coffee: "#272422",
+              secondary_coffee: "#333337",
+              c_yellow: "#E8BF96",
+              primary_grey: "#999999",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-primary_coffee">
+    <header
+      class="fixed top-0 left-0 h-[74px] w-full flex justify-between items-center bg-primary_coffee py-4 px-8 border-b-2 border-secondary_coffee z-5"
+    >
+      <img
+        src="./assets/img/logo_alomy.png"
+        alt="Logo Alomy"
+        title="Logo Alomy"
+        aria-label="Logo Alomy"
+      />
+      <nav class="flex justify-center w-100 gap-[2rem]">
+        <a href="/index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Work</a>
+        <a href="#">Service</a>
+        <a href="#">Blog</a>
+        <a href="#">Award</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main class="w-full">
+      <!--? Section "Unrivaled Shally" -->
+      <section
+        class="w-full h-1/5 mx-auto relative top-[8vh] bg-[url('./assets/img/top-section-bg.png')] bg-no-repeat bg-cover z-[-1]"
+      >
+        <article class="w-100 pt-[12vh] z-[-1]">
+          <img
+            class="mx-auto"
+            src="./assets/img/top-section-btn.png"
+            alt="Rounded Icon-Button"
+            title="Rounded Icon-Button"
+            aria-label="Rounded Icon-Button"
+          />
+          <div>
+            <h1
+              class="font-['NewYork'] w-2/5 flex justify-center mx-auto font-normal text-[6vw] text-center text-white"
+            >
+              Unrivaled Shally
+            </h1>
+            <h2
+              class="font-['NewYork'] w-1/5 mx-auto font-normal text-[1.5vw] text-white text-center"
+            >
+              A Creative
+              <span class="text-c_yellow leading-[10vh]">Fashion</span> Designer
+            </h2>
+            <div class="absolute top-[85vh] left-[50%] translate-x-[-50%]">
+              <img
+                class="relative"
+                src="./assets/img/17.jpeg"
+                alt="Lday in Army-Style"
+                title="Lday in Army-Style"
+                aria-label="Lday in Army-Style"
+              />
+              <img
+                class="absolute top-[-5vh] left-[-5vh]"
+                src="./assets/img/lines-image.png"
+                alt="Lines in golden-Color"
+                title="Lines in golden-Color"
+                aria-label="Lines in golden-Color"
+              />
+            </div>
+          </div>
+          <img
+            class="absolute top-0 left-[24.5vw] z-[-1]"
+            src="./assets/img/fashion-week1.png"
+            alt="Fashion Week 1"
+            title="Fashion Week 1"
+            aria-label="Fashion Week 1"
+          />
+          <div
+            class="relative top-[-50vh] right-[-58vw] z-[-1] w-80 h-[45vh] border-b-2 border-light-50"
+          >
+            <img
+              class="relative object-cover z-10"
+              src="./assets/img/fashion-week2.jpeg"
+              alt="Fashion Week 1"
+              title="Fashion Week 1"
+              aria-label="Fashion Week 1"
+            />
+            <img
+              class="absolute top-0 left-0 w-full h-auto -z-1"
+              src="./assets/img/gif/daisy.gif"
+              alt="Daisy"
+              title="Daisy"
+              aria-label="Daisy"
+            />
+            <p class="w-3/4 mt-[15vh] ml-[4vw]">
+              Working as a <strong>creative and outsource</strong> your fashion
+              design project and get it quickly done and delivered remotely
+              online
+            </p>
+          </div>
+          <img
+            class="relative ml-auto top-[-20vh]"
+            src="./assets/img/arrow-graphic-symbol.png"
+            alt="Rounded Arrow-Symbol"
+            title="Rounded Arrow-Symbol"
+            aria-label="Rounded Arrow-Symbol"
+          />
+          <div
+            class="w-[70vw] mx-auto mt-[5vh] border-b-2 border-secondary_coffee"
+          ></div>
+        </article>
+      </section>
+      <!--? Section "Fashion for passion & life style" -->
+      <section class="w-[50vw] mt-[15vh] pb-[4vh] mx-auto">
+        <h3 class="w-3/5 mx-auto text-center text-white">
+          Fashion for passion&nbsp&&nbsp;life style
+        </h3>
+        <p class="w-3/5 mx-auto text-center">
+          We formulate intentionally crafted supplements for thoughtful people
+          like you – using only the highest quality ingredients at effective
+          doses. Empowering you to take control of your wellness, look and feel
+          great, and live a life brimming with energy.
+        </p>
+        <button
+          class="btn flex justify-center mt-[5vh] mb-[5vh] mx-auto tracking-[4px]"
+        >
+          Check My Works
+        </button>
+      </section>
+      <div class="w-[70vw] mx-auto border-b-2 border-secondary_coffee"></div>
+
+      <!--? Section "Selected works" -->
+      <section class="flex flex-col w-[70vw] mt-[3vh] justify-center mx-auto">
+        <article>
+          <h3 class="w-1/5 mr-auto text-left text-white">Selected works</h3>
+          <div class="w-100 flex justify-start items-center mt-[2vh] ml-[5vw]">
+            <div class="w-[4vw] bg-white h-[1px] mr-[2rem]"></div>
+            <p class="w-3/5">
+              Selected works Creative work of natural source from, We select
+              only those modern works also my planet your products.
+            </p>
+            <button class="btn flex justify-end ml-auto">View All Works</button>
+          </div>
+        </article>
+      </section>
+      <!--? Section "Fashion Models" -->
+      <!-- Stefanie Brückler & Shelby Hypol -->
+      <section class="flex justify-between w-100 w-[70vw] mt-[10vh] mx-auto">
+        <!-- Stefanie Brückler -->
+        <div class="relative flex justify-start">
+          <img
+            class="relative w-4/5 h-[80vh]"
+            src="./assets/img/stefanie-brueckler.jpeg"
+            alt="Stefanie Brückler"
+            title="Stefanie Brückler"
+            aria-label="Stefanie Brückler"
+          />
+          <article
+            class="absolute flex justify-start flex-col top-[7vh] left-[3vw]"
+          >
+            <img
+              class="w-[1vw] mb-[10px]"
+              src="./assets/img/arrow-top-right.png"
+              alt="Arrow To-Top-Right"
+              title="Arrow To-Top-Right"
+              aria-label="Arrow To-Top-Right"
+            />
+            <h5 class="uppercase">Development</h5>
+            <h4 class="w-3/5">Stefanie Brückler</h4>
+          </article>
+          <article
+            class="absolute flex justify-start flex-col top-[7vh] left-[3vw]"
+          >
+            <img
+              class="w-[1vw] mb-[10px]"
+              src="./assets/img/arrow-top-right.png"
+              alt="Arrow To-Top-Right"
+              title="Arrow To-Top-Right"
+              aria-label="Arrow To-Top-Right"
+            />
+            <h5 class="uppercase text-white">Development</h5>
+            <h4 class="w-3/5 text-white">Stefanie Brückler</h4>
+          </article>
+        </div>
+
+        <!-- Shelby Hypol -->
+        <div class="relative flex justify-end mt-[17vh]">
+          <img
+            class="relative w-4/5 h-[60vh]"
+            src="./assets/img/shelby-hypol.jpeg"
+            alt="Shelby Hypol"
+            title="Shelby Hypol"
+            aria-label="Shelby Hypol"
+          />
+          <article class="absolute flex flex-col w-4/5 top-[7vh] right-[-3rem]">
+            <img
+              class="w-[1vw] mb-[10px]"
+              src="./assets/img/arrow-top-right.png"
+              alt="Arrow To-Top-Right"
+              title="Arrow To-Top-Right"
+              aria-label="Arrow To-Top-Right"
+            />
+            <h5 class="uppercase text-white">Creative</h5>
+            <h4 class="w-3/5 text-white">Shelby Hypol</h4>
+          </article>
+        </div>
+      </section>
+
+      <!-- Visual identity & Etienne Godiard -->
+      <section class="flex justify-between w-100 w-[70vw] mt-[10vh] mx-auto">
+        <!-- Visual identity -->
+        <div class="relative flex justify-end">
+          <img
+            class="relative w-4/5 h-[80vh]"
+            src="./assets/img/visual-identity.jpeg"
+            alt="visual identity"
+            title="visual identity"
+            aria-label="visual identity"
+          />
+          <article
+            class="absolute flex justify-start flex-col top-[7vh] left-[3vw]"
+          >
+            <img
+              class="w-[1vw] mb-[10px]"
+              src="./assets/img/arrow-top-right.png"
+              alt="Arrow To-Top-Right"
+              title="Arrow To-Top-Right"
+              aria-label="Arrow To-Top-Right"
+            />
+            <h5 class="uppercase">Web Design</h5>
+            <h4 class="w-3/5">Visual identity</h4>
+          </article>
+        </div>
+
+        <!-- Etienne Godiard -->
+        <!-- <div class="relative flex justify-start mt-[17vh]">
+          <img
+            class="relative w-4/5 h-[60vh]"
+            src="./assets/img/etienne-godiard.jpeg"
+            alt="Etienne Godiard"
+            title="Etienne Godiard"
+            aria-label="Etienne Godiard"
+          />
+          <article class="absolute flex flex-col w-4/5 top-[7vh] right-[-3rem]">
+            <img
+              class="w-[1vw] mb-[10px]"
+              src="./assets/img/arrow-top-right.png"
+              alt="Arrow To-Top-Right"
+              title="Arrow To-Top-Right"
+              aria-label="Arrow To-Top-Right"
+            />
+            <h5 class="uppercase text-white">Branding</h5>
+            <h4 class="w-3/5 text-white">Etienne Godiard</h4>
+          </article>
+        </div> -->
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
